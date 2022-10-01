@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Order form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+      rel="stylesheet"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript">
+      $(document).ready(function(){
+      
+     
+      });
+     
+    </script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <form method="post" action="" class="submit-form">
+          <div class="first">
+            <div class="form-group">
+              <label>Select Employee</label>
+              <div class="controls">
+                <select id="employee">
+                  <option>Select any employee</option>
+                  <option data-for="e1">Alex</option>
+                  <option data-for="e2">Morgan</option>
+                  <option data-for="e3">John</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group" id="designations">
+              <label class="control-label">Designation :</label>
+              <div class="controls" id="e1">
+                <input
+                  type="text"
+                  class="span11"
+                  placeholder="Designation"
+                  value="Manager"
+                  readonly
+                />
+              </div>
+              <div class="controls" id="e2">
+                <input
+                  type="text"
+                  class="span11"
+                  placeholder="Designation"
+                  value="Foreman"
+                  readonly
+                />
+              </div>
+              <div class="controls" id="e3">
+                <input
+                  type="text"
+                  class="span11"
+                  placeholder="Designation"
+                  value="Worker"
+                  readonly
+                />
+              </div>
+            </div>
+
+            
+            <div class="form-group">
+              <label>Select Warehouse</label>
+              <div class="controls">
+                <select id="warehouse">
+                  <option>Select any location</option>
+                  <option data-for="w1">Mirpur</option>
+                  <option data-for="w2">Khilgaon</option>
+                  <option data-for="w3">Uttara</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group" id="warehouseName">
+              <label class="control-label">Branch Name :</label>
+              <div class="controls" id="w1">
+                <input
+                  type="text"
+                  class="span11"
+                  placeholder="Warehouse name"
+                  value="Name A"
+                  readonly
+                />
+              </div>
+              <div class="controls" id="w2">
+                <input
+                  type="text"
+                  class="span11"
+                  placeholder="Warehouse name"
+                  value="Name B"
+                  readonly
+                />
+              </div>
+              <div class="controls" id="w3">
+                <input
+                  type="text"
+                  class="span11"
+                  placeholder="Warehouse name"
+                  value="Name C"
+                  readonly
+                />
+              </div>
+            </div>
+          
+            <div class="form-group">
+              <label>Select Material :</label>
+              <div class="controls">
+                <input
+                  type="text"
+                  name="materials[]"
+                  id="materials_0"
+                  class="span6"
+                  placeholder="Enter Material"
+                />
+                <input
+                  type="button"
+                  class="addbox"
+                  value="Add More"
+                  onclick="addBox()"
+                />
+              </div>
+              <div id="hob"></div>
+            </div>
+
+            <div class="form-group" id="total">
+              <label class="control-label">Total Quantity :</label>
+              <div class="controls">
+                <input
+                  type="text"
+                  class="span11"
+                  id="quantity"
+                  placeholder=""
+                />
+              </div>
+            </div>
+            <script>
+            
+            </script>
+          </div>
+          <h2>Finished Goods Section</h2>
+          <div class="form-group">
+            <label class="control-label">Client Name :</label>
+            <div class="controls">
+              <input
+                type="text"
+                class="span11"
+                id="cName"
+                placeholder="Enter Client Name"
+                value="Client Name"
+                readonly
+              />
+            </div>
+          </div>
+          <div class="formTwoContainer" class="span6" id="formTwoContainer">
+            <div class="rowsToAdd">
+            <div class="form-group">
+              <label class="control-label">Product Name :</label>
+              <div class="controls">
+                <input
+                  type="text"
+                  class="span11"
+                  id="Name"
+                  placeholder="enter name"
+                  value=""
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label">Model :</label>
+              <div class="controls">
+                <input
+                  type="text"
+                  class="span11"
+                  id="model"
+                  placeholder="enter model"
+                  value=""
+                
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label">size :</label>
+              <div class="controls">
+                <input
+                  type="text"
+                  class="span11"
+                  id="size"
+                  placeholder="enter size"
+                  value=""
+                
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label">Finished Quantity :</label>
+              <div class="controls">
+                <input
+                  type="text"
+                  class="f_quantity"
+                  id="finished_quantity"
+                  value=""
+                  placeholder="Finished Quantity"
+                  
+
+                
+                />
+              </div>
+            </div>
+            <input type="button" class="addButtonTwo" value="+" onclick="addRow()" />
+            
+          </div>
+          <div id="rowsToAdd">
+            
+
+          </div>
+          </div>
+
+        
+          <div class="form-group">
+            <label class="control-label">Final Quantity :</label>
+            <div class="controls">
+              <input
+                type="text"
+                class="span11"
+                name="finalQuantity"
+                id="finalQuantity"
+                placeholder=""
+                value=""
+                readonly
+              />
+            </div>
+          </div>
+         
+
+          <input
+            type="submit"
+            class="submit-btn"
+            value="submit"
+            name="submit"
+            id="submit"
+          />
+        </form>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    >
+</script>
+<script src="script.js"></script>
+
+  </body>
+</html>
